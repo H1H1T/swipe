@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幻灯片</title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div class="carousel content-main">
+    <ul class="list">
+        <li><img src="img/photo_1.jpg"/></li>
+        <li><img src="img/photo_2.jpg"/></li>
+        <li><img src="img/photo_3.jpg"/></li>
+        <li><img src="img/photo_4.jpg"/></li>
+        <li><img src="img/photo_5.jpg"/></li>
+        <!--<li><img src="img/photo_3.jpg"/></li>-->
+        <!--<li><img src="img/photo_4.jpg"/></li>-->
+        <!--<li><img src="img/photo_5.jpg"/></li>-->
+        <!--<li><img src="img/photo_3.jpg"/></li>-->
+        <!--<li><img src="img/photo_4.jpg"/></li>-->
+        <!--<li><img src="img/photo_5.jpg"/></li>-->
+    </ul>
+</div>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+    $(".carousel").attr("data-setting",'{ "width":1180,"height":411,"postWidth":658,"speed":600,"autoPlay":false}')
+    console.log($(".carousel"));
+    Carousel.init($(".carousel"))
+</script>
+</body>
+</html>
