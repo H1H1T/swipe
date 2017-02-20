@@ -8,6 +8,7 @@ $(function () {
 	var $boxImg=$('.box-img');
 	var $left=$('.left');
 	var $right=$('.right');
+
 	$right.click(function () {
 		$boxImg.prepend($boxImg.children().eq(4));
 	});

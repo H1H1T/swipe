@@ -1,12 +1,13 @@
 //电视剧大图滚动
 (function (jq) {
+	console.log(jq);
 	var posterTvGrid = function (o, options, data) {
 		this.parent = jq("#" + o);
+		// console.log(this.parent);
 		this.body = jq("body");
 		if (this.parent.length <= 0) {
 			return false;
 		}
-
 		this.options = jq.extend({}, posterTvGrid.options, options);
 		if (typeof(data) !== 'object') return false;
 
@@ -269,8 +270,6 @@
 				}
 				if (dir == 'left') {
 					_this.parent.find(".contentHolderUnit:nth-child(" + _this.pageNow + ")").css({zIndex: 0});
-
-
 					_this.parent.find(".contentHolderUnit:nth-child(" + pre + ") .elementOverlay").css({opacity: 0.4});
 					_this.parent.find(".contentHolderUnit:nth-child(" + pre + ")").animate({
 						opacity: 1,
@@ -409,7 +408,7 @@
 		autoWidth: true,//默认不用设置宽
 		width: 1180,//最外层宽，需要使用的时候在传,默认由程序自动判断
 		height: 310,//最外层高
-		delay: 5000,//滚动间隔（毫秒）
+		delay: 500000,//滚动间隔（毫秒）
 		speed: 500 //滚动速度毫秒
 	};
 

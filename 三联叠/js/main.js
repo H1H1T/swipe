@@ -4,7 +4,7 @@ $(function(){
 	var timer=800;
 	var intervaltimer=0;
 	var isMoving=false;
-	
+
 	function slide(slideMode){//轮播方法		
 		if (isMoving==false){
 			isMoving=true;
@@ -66,8 +66,8 @@ $(function(){
 				});
 				prev.stop(true,true).animate({width:"450px",height:"180px",left:"0px",top:"60px",opacity:0},timer,function(){
 					isMoving = false;
-				}); 
-				index_2++;	
+				});
+				index_2++;
 			}//if else
 	
 			hidden.find("span").css("opacity",0.5);
@@ -138,10 +138,10 @@ $(function(){
 			clearInterval(intervaltimer);
 			intervaltimer=null;
 			slide();
-			intervaltimer=setInterval(slide,3000);        
+			intervaltimer=setInterval(slide,300000);
 		});
 		
-		intervaltimer=setInterval(slide,3000);
+		intervaltimer=setInterval(slide,300000);
 		
 	}else{
 		
