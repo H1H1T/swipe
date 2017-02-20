@@ -1,6 +1,7 @@
 //电视剧大图滚动
 (function (jq) {
 	console.log(jq);
+	/* posterTvGrid页面数据 */
 	var posterTvGrid = function (o, options, data) {
 		this.parent = jq("#" + o);
 		// console.log(this.parent);
@@ -35,11 +36,11 @@
 			this.nextLeft = this.options.width - 530;
 			this.preNLeft = -530;
 			this.nextNLeft = this.options.width;
-			this.pageNowLeft = (this.options.width - 640) / 2
+			this.pageNowLeft = (this.options.width - 640) / 2;
 			this.drawContent();
 		},
 		drawContent: function () {
-			this.parent.empty();
+			this.parent.empty();//清除 this.parent 的内容
 			this.parent.css({width: this.options.width + "px", height: this.options.height + "px", position: "relative"});
 			this.content = document.createElement("DIV");
 			this.content.className = this.options.className;
@@ -56,7 +57,7 @@
 				this.bottomNav.appendChild(bottomItem);
 			}
 			this.content.appendChild(this.bottomNav);
-			this.bannerControls = '<div class="bannerControls"> <div class="leftNav" style="display: block;"></div> <div class="rightNav" style="display: block;"></div> </div>';
+			this.bannerControls = '<div class="bannerControls"><div class="leftNav" style="display: block;"></div> <div class="rightNav" style="display: block;"></div></div>';
 			this.content.innerHTML += this.bannerControls;
 
 			this.contentHolder = document.createElement("DIV");
