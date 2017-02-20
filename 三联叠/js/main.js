@@ -56,7 +56,7 @@ $(function(){
 				hidden.css("z-index","1");
 				//当index_2自增，各图片往左运动效果
 				hidden.css({width:"450px",height:"180px",top:"60px","left":"730px","opacity":0});
-				hidden.stop(true,true).animate({width:"580px",height:"240px",top:"20px",left:"600px",opacity:1},timer);							
+				hidden.stop(true,true).animate({width:"580px",height:"240px",top:"20px",left:"600px",opacity:1},timer);
 				curr.stop(true,true).animate({width:"580px",height:"240px",top:"20px",left:"0px",opacity:1},timer);
 				//next  -->  curr     next中的图片li轮换到curr的位置      其他一次轮换
 				next.find("span").css("opacity",0);
@@ -138,10 +138,10 @@ $(function(){
 			clearInterval(intervaltimer);
 			intervaltimer=null;
 			slide();
-			intervaltimer=setInterval(slide,300000);
+			intervaltimer=setInterval(slide,3000);
 		});
 		
-		intervaltimer=setInterval(slide,300000);
+		intervaltimer=setInterval(slide,3000);
 		
 	}else{
 		
